@@ -86,7 +86,7 @@ function assignVillain(){
     }   
 }
 
-//create characters. I initially did this in HTML but found a bug at the end of the game and decided to do this//
+//create characters.//
 function createChar(character){
  var newDiv = $("<div>");
  newDiv.attr("id",character.name);
@@ -111,24 +111,27 @@ function createChar(character){
  createChar(hicksStats);
  createChar(alienStats);
 
+
  $("#characters div").on("click", function(){
-    $("#yourCharacter").append(this);
-   $("#enemies").append($("#characters div").not(this));
+    $("#yourCharacter").append($(this));
+   $("#enemies").append($("#characters div").not($(this)));
    $("#enemies div").css({background:"red"});
    assignHero();
-   
-   
+   $("#enemies div").off("click");
    $("#enemies div").on("click", function(){
     if($("#currentOpponent").is(":empty")){
     $("#currentOpponent").append($(this));
     assignVillain();
     }
+    // want to get rid of this//
     else {
         $("#enemies").append(this);
     }
 
 });
 });
+
+
 
 
 //on attack button click//
