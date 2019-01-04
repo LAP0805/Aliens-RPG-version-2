@@ -3,6 +3,7 @@ body {
     background:url("../images/alien_big.png");
     background-repeat:no-repeat;
     background-size: cover;
+    font-family:monospace;
 }
 #characters {
     height: 200px;
