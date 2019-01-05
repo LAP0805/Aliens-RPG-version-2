@@ -39,7 +39,7 @@ $(document).ready(function() {
         counterAttack:12,
         image: ("assets/images/alien.jpg"),
     }
-
+  
 ///asign hero
    function assignHero(){
        var getMe= $("#yourCharacter div");
@@ -132,41 +132,22 @@ function createChar(character){
 
 });
 });
+//update stats on attack click//
+function outerUpdateStats(){
+function updateStats(character, characterObject){
+var getID= character.attr("id");
 
-function updateStats(){
-    var getHero= $("#yourCharacter div");   
-        getHeroID = getHero.attr("id");   
-       if (getHeroID === "Ripley"){
-        $("#Ripley p:nth-child(3)" ).text("health: " + ripleyStats.hP + " attack: " + ripleyStats.attack + " counter-attack: " + ripleyStats.counterAttack);
-        
-    }
-    else if (getHeroID==="Vasquez"){
-        $("#Vasquez p:nth-child(3)" ).text("health: " + vasquesStats.hP + " attack: " + vasquesStats.attack + " counter-attack: " + vasquesStats.counterAttack);
-          
-    }
-    else if (getHeroID==="Hicks"){
-        $("#Hicks p:nth-child(3)" ).text("health: " + hicksStats.hP + " attack: " + hicksStats.attack + " counter-attack: " + hicksStats.counterAttack);   
-    }
-    else if (getHeroID==="Xenomorph"){
-        $("#Xenomorph p:nth-child(3)" ).text("health: " + alienStats.hP + " attack: " + alienStats.attack + " counter-attack: " + alienStats.counterAttack);    
-    }   
-    var getBaddy= $("#currentOpponent div");   
-    getBaddyID = getBaddy.attr("id");   
-   if (getBaddyID === "Ripley"){
-    $("#Ripley p:nth-child(3)" ).text("health: " + ripleyStats.hP + " attack: " + ripleyStats.attack + " counter-attack: " + ripleyStats.counterAttack);
+    $("#" + getID+" p:nth-child(3)").text("health: " + characterObject.hP + " attack: " + characterObject.attack + " counter-attack: " + characterObject.counterAttack);
+       }
     
-}
-else if (getBaddyID==="Vasquez"){
-    $("#Vasquez p:nth-child(3)" ).text("health: " + vasquesStats.hP + " attack: " + vasquesStats.attack + " counter-attack: " + vasquesStats.counterAttack);
-      
-}
-else if (getBaddyID==="Hicks"){
-    $("#Hicks p:nth-child(3)" ).text("health: " + hicksStats.hP + " attack: " + hicksStats.attack + " counter-attack: " + hicksStats.counterAttack);   
-}
-else if (getBaddyID==="Xenomorph"){
-    $("#Xenomorph p:nth-child(3)" ).text("health: " + alienStats.hP + " attack: " + alienStats.attack + " counter-attack: " + alienStats.counterAttack);    
-}   
-}
+       updateStats($("#Ripley"), ripleyStats);
+       updateStats($("#Vasquez"), vasquesStats);
+       updateStats($("#Hicks"), hicksStats);
+       updateStats($("#Xenomorph"), alienStats);
+    
+    };
+
+
 
 
 //on attack button click//
@@ -181,7 +162,7 @@ $("#attack").on("click", function(){
         hero.hP = hero.hP - villain.counterAttack;
         $("#gameInfo2").text("You attacked " + villain.name + " for " + hero.attack + ". " + villain.name + " counter-attacked for " + villain.counterAttack);
         hero.attack = hero.attack + hero.increase;
-        updateStats();
+        outerUpdateStats();
         if (hero.hP < 1){
             $("#restart").css({display:"block"});
             $("#gameInfo2").text("You lose!");
