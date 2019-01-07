@@ -16,7 +16,7 @@ $(document).ready(function() {
     },
     vasquesStats = {
         name: "Vasquez",
-        hP: 1220,
+        hP: 220,
         attack: 18,
         increase: 18,
         counterAttack:25,
