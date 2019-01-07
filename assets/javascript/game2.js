@@ -119,18 +119,22 @@ function createChar(character){
    assignHero();
    $("#enemies div").off("click");
    
-   //why does this have to be nested in the above onclick event to work?//
-   $("#enemies div").on("click", function(){
+
+});
+
+   //thanks to Zach for helping me figure out how to un-nest this from the above function!//
+   $("#enemies").on("click", "div", function(){
+       console.log('hey im working')
     if($("#currentOpponent").is(":empty")){
     $("#currentOpponent").append($(this));
     assignVillain();
     }
+    
     // want to get rid of this//
     else {
         $("#enemies").append(this);
     }
 
-});
 });
 //update stats on attack click//
 function outerUpdateStats(){
