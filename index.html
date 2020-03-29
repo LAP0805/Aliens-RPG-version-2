@@ -1,46 +1,47 @@
 <DOCtype html>
-<html>
+    <html>
+
     <head>
-    <title>Aliens RPG</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-       <link rel="stylesheet" href= "assets/css/reset.css">
-       <link rel="stylesheet" href= "assets/css/style.css">
+        <title>Aliens RPG</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
+
     <body>
-<div id = "characters"></div>
-<div id="header">
-    <p>Pick Your Character, then pick an opponent. Click attack to fight!<p>
-</div>
-<div id="enemies"></div>
-<div id="defenders">
-    <p>Battlefield</p>
-</div>
-<div id="currentOpponentText">
-    <p>Your Character&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Current Opponent</p>
-</div>
-<div id ="yourCharacter">
-</div>
-<div id ="buttonDiv">
-    <button type="button" id = "attack">Attack</button>
-</div>
-<div id ="currentOpponent"></div>
+        <div class="container">
+            <div class="row" id="characters"></div>
+            <div class="row" id="header">
+                <div class="col-sm-12 col-md-12 col-lg-12">Pick Your Character, then pick an opponent. Click attack to
+                    fight!</div>
+            </div>
+            <div class="row" id="enemies"></div>
+            <div class="row" id="defenders">
+                <p>Battlefield</p>
+            </div>
+            <div class="row" id="currentOpponentText">
+                <p>Your
+                    Character&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    Current Opponent</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="yourCharacter">
+                </div>
+                <div class="col-sm-3" id="buttonDiv">
+                    <button type="button" id="attack">Attack</button>
+                </div>
+                <div class="col-sm-3" id="currentOpponent"></div>
 
-<div id ="gameInfo" class="poop">
-    <div id ="gameInfo2"></div>
-    <div id="roundWon">You won the round! Pick a new opponent</div>
-    <div><button type="button" id = "restart">Restart Game</button></div>
-        
-</div>
+                <div class="col-sm-3" id="gameInfo" class="poop">
+                    <div id="gameInfo2"></div>
+                    <div id="roundWon">You won the round! Pick a new opponent</div>
+                    <div><button type="button" id="restart">Restart Game</button></div>
 
-
-
-
-
-
-
-
-
+                </div>
+            </div>
+        </div>
 
 
 
@@ -54,6 +55,23 @@
 
 
 
-<script src="assets/javascript/game2.js"></script>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+        <script src="assets/javascript/game2.js"></script>
     </body>
-</html>
+
+    </html>

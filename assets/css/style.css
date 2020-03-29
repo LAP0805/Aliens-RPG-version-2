@@ -1,75 +1,72 @@
 body {
     background-color: #ebebeb;
-    background:url("../images/alien_big.png");
-    background-repeat:no-repeat;
+    background: url("../images/alien_big.png");
+    background-repeat: no-repeat;
     background-size: cover;
-    font-family:monospace;
+    font-family: monospace;
 }
+
 #characters {
-    height: 200px;
-    margin:0px;
+    height: 225px;
+    margin: 0px;
 }
-.characterImages {
-    height:125px;
-    width:125px;
-}
-.characterDiv{
-    width: 200px;
-    float:left;
-    border:2px solid black;
-    margin:5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    text-align:center;
-    background:#ebebeb;
-   
-}
-#header{
-    font-size:20px;
+
+#header {
+    font-size: 20px;
     width: 800px;
-    padding:0px;
-    
-}
-#defenders{
-    font-size:40px;
-    width: 500px;
-    padding:0px;
-    
-}
-#enemies {
-    overflow:hidden;
-    height:205px;
-    margin:0px;
-}
- #currentOpponent, #gameInfo, #yourCharacter {
     padding: 0px;
-    width:200px;
-    height:200px;
-    float:left;
-}
-#currentOpponentText{
-    font-size:20px;
-    padding:0px;
 
 }
-#buttonDiv{
-    width: 100px;
-    float:left;
-    padding:50px;
+
+#defenders {
+    font-size: 40px;
+    width: 500px;
+    padding: 0px;
+
 }
-#gameInfo{
+
+#enemies {
+    overflow: hidden;
+    height: 225px;
+    margin: 0px;
+}
+
+#currentOpponent,
+#gameInfo,
+#yourCharacter {
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#currentOpponentText {
+    font-size: 20px;
+    padding: 0px;
+
+}
+
+#buttonDiv {
+    width: 100px;
+    float: left;
+    padding: 50px;
+}
+
+#gameInfo {
     font-size: 20px;
     text-align: center;
-    padding:20px;
+    padding: 20px;
 }
+
 #restart {
-    display:none;
-    padding:20px;
-    margin:30px;
-    font-size:20px;
+    display: none;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
 }
-#roundWon{
-    display:none;
-    font-size:20px;
-    text-align:center;
+
+#roundWon {
+    display: none;
+    font-size: 20px;
+    text-align: center;
 }
